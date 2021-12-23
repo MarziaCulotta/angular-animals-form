@@ -5,11 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { FormComponent } from './core/components/form/form.component';
+import { FormModule } from './form/form.module';
+import { GalleryModule } from './form/pages/gallery.module';
+
 
 @NgModule({
-  declarations: [AppComponent, FormComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    FormModule,
+    GalleryModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

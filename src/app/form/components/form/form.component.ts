@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'angprj-form',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly router: Router) {
+
+  }
 
   ngOnInit(): void {
   }
 
+  btnClick() {
+    this.router.navigateByUrl('/gallery');
+  }
 }
