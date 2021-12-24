@@ -8,24 +8,23 @@ import { environment } from 'src/environments/environment';
 export class FormService {
 
   numb!: number;
+  chosenAnimal!: string;
+  // private errorMessage = '';
 
   constructor(private readonly http: HttpClient) { }
 
-  getShibesPicture(numb = 1) {
-    const params = new HttpParams()
-    .set('count', numb)
-    return this.http.get(environment.shibesApiUrl, {params});
-  }
-
-  getCats(numb = 1) {
+  getAnimalsPicture() {
     const params = new HttpParams()
     .set('count', this.numb)
-    return this.http.get(environment.catsApiUrl, {params});
+    return this.http.get(`${environment.apiUrl}${this.chosenAnimal}`, {params});
   }
 
-  getBirds(numb = 1) {
-    const params = new HttpParams()
-    .set('count', this.numb)
-    return this.http.get(environment.birdsApiUrl, {params});
-  }
+  // getErrorMessage(): string {
+  //   return this.errorMessage;
+  // }
+
+  // resetMessage(): void {
+  //   this.errorMessage = '';
+  // }
+
 }

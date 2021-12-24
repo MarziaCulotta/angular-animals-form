@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { GalleryComponent } from './gallery/gallery.component';
 
 
@@ -9,7 +11,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     GalleryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class GalleryModule { }

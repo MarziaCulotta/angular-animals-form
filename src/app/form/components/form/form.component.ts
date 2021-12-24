@@ -9,19 +9,12 @@ import { FormService } from '../service/form.service';
 })
 export class FormComponent implements OnInit {
 
-  animals: string[] = ["Shibes", "Cats", "Birds"];
-
-  constructor(private readonly router: Router, private readonly formService: FormService) {
+  constructor(private readonly router: Router,  readonly formService: FormService) {
 
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  ShowShibes() {
-    this.formService.getShibesPicture().subscribe(response => console.log(response)
-    )
-  }
 
   btnClick() {
     this.router.navigateByUrl('/gallery');

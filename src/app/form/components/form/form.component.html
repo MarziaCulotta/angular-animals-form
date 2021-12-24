@@ -1,9 +1,9 @@
 <form class="d-flex flex mt-3 ms-3">
-  <select class="selected-animal me-3" name="selected-animal" id=""  >
+  <select class="selected-animal me-3" name="selected-animal" [(ngModel)]="this.formService.chosenAnimal">
     <option value="shibes">Shibes</option>
     <option value="cats">Cats</option>
     <option value="birds">Birds</option>
   </select>
-  <input type="number" name="" id="">
-  <button (click)="btnClick()">Submit</button>
+  <input class="me-3" type="number" name="number" [(ngModel)]="this.formService.numb">
+  <button (click)="btnClick()">Invia</button>
 </form>
