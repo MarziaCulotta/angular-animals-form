@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormService } from '../service/form.service';
 
 @Component({
   selector: 'angprj-form',
@@ -8,11 +9,18 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private readonly router: Router) {
+  animals: string[] = ["Shibes", "Cats", "Birds"];
+
+  constructor(private readonly router: Router, private readonly formService: FormService) {
 
   }
 
   ngOnInit(): void {
+  }
+
+  ShowShibes() {
+    this.formService.getShibesPicture().subscribe(response => console.log(response)
+    )
   }
 
   btnClick() {
