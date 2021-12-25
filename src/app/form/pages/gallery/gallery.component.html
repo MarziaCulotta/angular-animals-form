@@ -1,4 +1,6 @@
 <div class="animal-pic-container">
-  <h1>Ecco le tue scelte</h1>
-  <img *ngFor="let animal of animalsPicture" src={{animal}} alt="a picture of a cute animal">
+  <h1 class="text text-center mt-3 mb-3">Cuteness over 9000!</h1>
+  <div class="d-flex flex-column align-items-center mt-2" >
+    <img class="animal-pic mb-3" src={{animal}} alt="a picture of a cute animal" *ngFor="let animal of animalsPicture" >
+  </div>
 </div>

@@ -16,7 +16,7 @@ export class GalleryComponent implements OnInit {
   constructor(readonly formService: FormService) { }
 
   ngOnInit(): void {
-    this.animalsPicture = this.formService.getAnimalsPicture().subscribe((result: Object) => {this.animalsPicture = result, console.log(result)})
+    this.animalsPicture = this.formService.getAnimalsPicture().subscribe(result => {this.animalsPicture = result, console.log(result)})
   }
 
   // ngOnInit(): void {
