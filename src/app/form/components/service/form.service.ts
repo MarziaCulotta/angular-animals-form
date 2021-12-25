@@ -16,7 +16,7 @@ export class FormService {
   getAnimalsPicture() {
     const params = new HttpParams()
     .set('count', this.numb)
-    return this.http.get(`${environment.apiUrl}${this.chosenAnimal}`, {params});
+    return this.http.get<string[]>(`${environment.apiUrl}${this.chosenAnimal}`, {params}); //tipizzare
   }
 
   // getErrorMessage(): string {

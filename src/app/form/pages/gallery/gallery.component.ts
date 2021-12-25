@@ -9,14 +9,14 @@ import { FormService } from '../../components/service/form.service';
 })
 export class GalleryComponent implements OnInit {
 
-  animalsPicture!: Object;
-  sub!: Subscription;
+  animalsPicture!: any ;
+
   // private errorMessage = 'Error! You must choose at least one picture!';
 
   constructor(readonly formService: FormService) { }
 
   ngOnInit(): void {
-    this.sub = this.formService.getAnimalsPicture().subscribe((result: Object) => {this.animalsPicture = result, console.log(result)})
+    this.animalsPicture = this.formService.getAnimalsPicture().subscribe((result: Object) => {this.animalsPicture = result, console.log(result)})
   }
 
   // ngOnInit(): void {
