@@ -1,0 +1,22 @@
+<body>
+  <header>
+    <img src="../../../../assets/img/all-flat-design-animals.jpg" alt="animal's crew">
+    <h1 class="title text-center mt-4">Welcome to the cutest page on the web!</h1>
+  </header>
+
+  <main>
+    <h2 class="text-center">Choose an animal from the list and cuteness will overwhelm you ♥</h2>
+    <form class="d-flex justify-content-center ms-3 mt-5">
+      <select class="selected-animal me-3" name="selected-animal" [(ngModel)]="this.formService.chosenAnimal" required>
+        <option value="shibes">Shibes</option>
+        <option value="cats">Cats</option>
+        <option value="birds">Birds</option>
+      </select>
+      <input class="input me-3" type="number" name="number" [(ngModel)]="this.formService.numb" required>
+      <button class="btn btn-success" (click)="btnClick()" [disabled]="!this.formService.chosenAnimal" >Click for cuteness</button>
+    </form>
+  </main>
+
+</body>
+
+
