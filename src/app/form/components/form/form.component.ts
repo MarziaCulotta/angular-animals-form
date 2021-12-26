@@ -9,14 +9,13 @@ import { FormService } from '../service/form.service';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private readonly router: Router,  readonly formService: FormService) {
 
-  }
+  constructor(private readonly router: Router,  readonly formService: FormService) { }
 
   ngOnInit(): void { }
-
 
   btnClick() {
     this.router.navigateByUrl('/gallery');
   }
+
 }

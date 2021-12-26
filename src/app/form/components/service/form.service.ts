@@ -9,22 +9,20 @@ export class FormService {
 
   numb!: number;
   chosenAnimal!: string;
-  // private errorMessage = '';
+  errorMessage = 'So Sorry! You must choose at least one picture to let the magic happens!';
 
   constructor(private readonly http: HttpClient) { }
 
   getAnimalsPicture() {
     const params = new HttpParams()
     .set('count', this.numb)
-    return this.http.get(`${environment.apiUrl}${this.chosenAnimal}`, {params}); //tipizzare
+    return this.http.get(`${environment.apiUrl}${this.chosenAnimal}`, {params});
   }
 
-  // getErrorMessage(): string {
-  //   return this.errorMessage;
-  // }
-
-  // resetMessage(): void {
-  //   this.errorMessage = '';
-  // }
+  getErrorMessage(): any {
+    if (this.numb <= 0 ) {
+      return this.errorMessage;
+    }
+  }
 
 }
